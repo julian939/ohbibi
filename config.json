@@ -1,0 +1,5 @@
+{
+    "prefix": "!",
+    "twitch_channels": ["channel1", "channel2"],
+    "wiki_api_url": "https://ohbabykart.wiki.gg/api.php"
+}
