@@ -31,7 +31,7 @@ async def load_cogs():
 
 @bot.event
 async def on_ready():
-    logging.info(f'Bot ist online als {bot.user}')
+    logging.info(f'Bot is online as {bot.user}')
 
     await load_cogs()
     await register_cogs()
