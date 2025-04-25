@@ -1,5 +1,17 @@
 {
     "prefix": "!",
-    "twitch_channels": ["channel1", "channel2"],
-    "wiki_api_url": "https://ohbabykart.wiki.gg/api.php"
+    "bot_channel_id": 1364334254837993512,
+    "wiki_api_url": "https://ohbabykart.wiki.gg/api.php",
+    "stream_scraper_interval": 5,
+    "streamer_permission_role": 1365413035069673644,
+    "streamers": {
+        "twitch": [
+            "channel1",
+            "channel2"
+        ],
+        "abstract": [
+            "channel1",
+            "channel2"
+        ]
+    }
 }

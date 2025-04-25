@@ -2,7 +2,7 @@ import discord
 from discord import app_commands
 
 class Wiki(app_commands.Group):
-    @app_commands.command(description="Antwortet mit Pong!")
+    @app_commands.command(description="Answers with Pong!")
     async def ping(self, interaction: discord.Interaction):
         await interaction.response.send_message("🏓 Pong!")
 

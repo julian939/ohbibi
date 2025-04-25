@@ -1,26 +1,29 @@
 import discord
-from discord.ext import commands
-import os
-from utils.config_loader import load_config
-from utils.logger import setup_logger 
 import logging
+import os
+import asyncio
+from discord.ext import commands
+import utils.file_loader as file_loader
+from utils.logger import setup_logger 
+from services.stream_scraper import StreamScraper
 
-config = load_config()
+config = file_loader.load_config()
+env = file_loader.load_env()
 setup_logger()
 
 intents = discord.Intents.all()
-bot = commands.Bot(command_prefix=config["prefix"], intents=intents)
+bot = commands.Bot(command_prefix=config.get("prefix", "!"), intents=intents)
 
-async def register_cogs():
+async def _register_cogs():
     try:
-        guild = discord.Object(id=config["DISCORD_SERVER_ID"]) 
+        guild = discord.Object(id=env["DISCORD_SERVER_ID"]) 
         bot.tree.copy_global_to(guild=guild)
         await bot.tree.sync(guild=guild)
         logging.info("Synchronised cogs sucessful.")
     except Exception as e:
         logging.error(f"Error while synchronising: {e}")
 
-async def load_cogs():
+async def _load_cogs():
     for filename in os.listdir("./cogs"):
         if filename.endswith(".py"):
             try:
@@ -33,11 +36,13 @@ async def load_cogs():
 async def on_ready():
     logging.info(f'Bot is online as {bot.user}')
 
-    await load_cogs()
-    await register_cogs()
+    await _load_cogs()
+    await _register_cogs()
+
+    asyncio.create_task(StreamScraper().start_checking())
 
     print("Registered Slash-Commands:")
-    for command in bot.tree.get_commands(guild=discord.Object(id=config["DISCORD_SERVER_ID"])):
+    for command in bot.tree.get_commands(guild=discord.Object(id=env["DISCORD_SERVER_ID"])):
         print(f"- {command.name}")
 
-bot.run(config["DISCORD_TOKEN"])
+bot.run(env["DISCORD_TOKEN"])
