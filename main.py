@@ -36,6 +36,8 @@ async def _load_cogs():
 async def on_ready():
     logging.info(f'Bot is online as {bot.user}')
 
+    await bot.change_presence(activity=discord.Streaming(name="Oh Baby! Kart", url="https://www.twitch.tv/directory/category/oh-baby-kart"))
+
     await _load_cogs()
     await _register_cogs()
 

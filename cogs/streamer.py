@@ -80,17 +80,17 @@ class Streamer(app_commands.Group):
         fields = []
 
         if twitch_streamers:
-            fields.append(("**Twitch:**", "\n".join(f"- {name}" for name in twitch_streamers)))
+            fields.append(("**Twitch:**", "\n".join(f"- [{name}](https://www.twitch.tv/{name})" for name in twitch_streamers)))
         
         if abstract_streamers:
-            fields.append(("**Abstract:**", "\n".join(f"- {name}" for name in abstract_streamers)))
+            fields.append(("**Abstract:**", "\n".join(f"- [{name}](https://portal.abs.xyz/stream/{name})" for name in abstract_streamers)))
         
         if not twitch_streamers and not abstract_streamers:
             fields.append("📭 No streamer in the list.")
 
         embed = utils.create_embed(
             title="",
-            description="📺 Streamer",
+            description="",
             fields=fields
         )
 

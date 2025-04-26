@@ -6,12 +6,22 @@
     "streamer_permission_role": 1365413035069673644,
     "streamers": {
         "twitch": [
-            "channel1",
-            "channel2"
+            "rattini",
+            "ohbabybulma",
+            "morphbottv",
+            "joebrewing",
+            "larllad",
+            "axelsmol",
+            "jxkobw",
+            "passytee"
         ],
         "abstract": [
             "channel1",
-            "channel2"
+            "channel2",
+            "channel3",
+            "channel4",
+            "channel5",
+            "channel6"
         ]
     }
 }
