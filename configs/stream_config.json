@@ -1,0 +1,33 @@
+{
+    "stream_permission_role": 1365413035069673644,
+    "stream_scraper_interval": 5,
+    "twitch_emoji": "<:LogoTwitch:1136815276952915981>",
+    "abstract_emoji": "<:LogoTwitch:1136815276952915981>",
+    "streamers" : [
+        {
+            "platform_username": "rattini",
+            "platform": "twitch",
+            "discord_id": 123342364
+        },
+        {
+            "platform_username": "rattini",
+            "platform": "abstract",
+            "discord_id": 123342364
+        },
+        {
+            "platform_username": "rattini",
+            "platform": "twitch",
+            "discord_id": 123342364
+        },
+        {
+            "platform_username": "rattini",
+            "platform": "twitch",
+            "discord_id": 123342364
+        },
+        {
+            "platform_username": "rattini",
+            "platform": "twitch",
+            "discord_id": 123342364
+        }
+    ]
+}

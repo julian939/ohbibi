@@ -1,6 +1,7 @@
+import discord
 from discord import Embed
 
-def create_embed(title: str = "", description: str = "", fields: list = None, color : str = 0xff69b4) -> Embed:
+def create_embed(title: str = "", description: str = "", fields: list = None, color = discord.Color.pink) -> Embed:
     embed = Embed(
         title=title,
         description=description,
