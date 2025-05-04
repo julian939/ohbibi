@@ -5,7 +5,8 @@ import asyncio
 from discord.ext import commands
 import utils.file_loader as file_loader
 from utils.logger import setup_logger 
-from services.stream.abstract_scraper import StreamScraper
+from services.stream.twitch_api import TwitchAPI as TwitchAPI
+from services.stream.stream_notification_service import StreamNotificationService as StreamNotificationService
 
 config = file_loader.load_config()
 env = file_loader.load_env()
@@ -41,8 +42,8 @@ async def on_ready():
 
     await _load_cogs()
     await _register_cogs()
-
-    asyncio.create_task(StreamScraper(bot).start_checking())
+    
+    asyncio.create_task(StreamNotificationService(bot).check_streams())
 
     print("Registered Slash-Commands:")
     for command in bot.tree.get_commands(guild=discord.Object(id=env["DISCORD_SERVER_ID"])):

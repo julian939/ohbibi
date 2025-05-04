@@ -3,7 +3,6 @@ import asyncio
 
 import utils.file_loader as file_loader
 import services.stream.twitch_api as twitch
-import services.stream.abstract_scraper as abstract
 
 class StreamHandler():
 
