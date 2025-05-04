@@ -42,7 +42,7 @@ async def on_ready():
 
     await _load_cogs()
     await _register_cogs()
-    
+
     asyncio.create_task(StreamNotificationService(bot).check_streams())
 
     print("Registered Slash-Commands:")
