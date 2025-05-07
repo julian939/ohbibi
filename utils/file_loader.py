@@ -39,5 +39,6 @@ def load_env():
     config["DISCORD_SERVER_ID"] = os.getenv("DISCORD_SERVER_ID")
     config["TWITCH_CLIENT_ID"] = os.getenv("TWITCH_CLIENT_ID")
     config["TWITCH_CLIENT_SECRET"] = os.getenv("TWITCH_CLIENT_SECRET")
+    config["DATABASE_LOCATION"] = os.getenv("DATABASE_LOCATION")
 
     return config

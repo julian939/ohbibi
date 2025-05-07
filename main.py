@@ -5,8 +5,7 @@ import asyncio
 from discord.ext import commands
 import utils.file_loader as file_loader
 from utils.logger import setup_logger 
-from services.stream.twitch_api import TwitchAPI as TwitchAPI
-from services.stream.stream_notification_service import StreamNotificationService as StreamNotificationService
+from services.stream_notification_service import StreamNotificationService
 
 config = file_loader.load_config()
 env = file_loader.load_env()

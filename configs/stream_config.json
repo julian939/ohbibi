@@ -1,23 +1,57 @@
 {
-    "stream_permission_role": 1365413035069673644,
+    "stream_permission_role": 969447997895229482,
     "stream_scraper_interval": 5,
     "twitch_emoji": "<:LogoTwitch:1136815276952915981>",
     "abstract_emoji": "<:LogoTwitch:1136815276952915981>",
-    "streamers" : [
+    "stream_categories": [
+        "Oh Baby! Kart",
+        "Shogun Curse"
+    ],
+    "streamers": [
         {
             "platform_username": "rattini",
             "platform": "twitch",
-            "discord_id": 123342364
+            "discord_id": 1
         },
         {
-            "platform_username": "Lambada",
-            "platform": "abstract",
-            "discord_id": 357904678115082242
-        },
-        {
-            "platform_username": "wade_the_shiba",
+            "platform_username": "ohbabybulma",
             "platform": "twitch",
-            "discord_id": 357904678115082242
+            "discord_id": 1
+        },
+        {
+            "platform_username": "morphbottv",
+            "platform": "twitch",
+            "discord_id": 1
+        },
+        {
+            "platform_username": "larllad",
+            "platform": "twitch",
+            "discord_id": 1
+        },
+        {
+            "platform_username": "axelsmol",
+            "platform": "twitch",
+            "discord_id": 1
+        },
+        {
+            "platform_username": "jxkobw",
+            "platform": "twitch",
+            "discord_id": 1
+        },
+        {
+            "platform_username": "passytee",
+            "platform": "twitch",
+            "discord_id": 1
+        },
+        {
+            "platform_username": "brocoloco99",
+            "platform": "twitch",
+            "discord_id": 1
+        },
+        {
+            "platform_username": "0xbartic",
+            "platform": "twitch",
+            "discord_id": 126472363415044096
         }
     ]
 }
