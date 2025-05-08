@@ -45,4 +45,7 @@ class SQL:
 
         del self
         return result
+    
+    def setup(self):
+        self.execute("CREATE TABLE IF NOT EXISTS users (discord_id INTEGER PRIMARY KEY, ingame_name TEXT NOT NULL UNIQUE, mmr INTEGER NOT NULL DEFAULT 0); ")
         
